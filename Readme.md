@@ -103,5 +103,3 @@ events = p.poll()
 	monkey.patch_socket()  # 运行响应的脚本，例如转换socket中所有的阻塞
 	monkey.patch_all()  # 如果将所有可转换的IO阻塞全部转换则运行all
 	```
-
-***参考代码***
