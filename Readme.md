@@ -98,6 +98,7 @@ events = p.poll()
 >- 作用：在gevent协程中，协程只能遇到gevent指定类型的阻塞才能跳转到其他协程，因此，我们希望将普通的IO阻塞行为转化为可以触发gevent协程跳转的阻塞，以提高执行效率
 >- 转换方式：gevent提供了一个脚本程序monkey，可以修改底层解释IO阻塞的行为，将很多普通阻塞转换为gevent阻塞
 >使用方法：
+	
 	```python
 	from gevent import monkey  # 导入monkey
 	monkey.patch_socket()  # 运行响应的脚本，例如转换socket中所有的阻塞
